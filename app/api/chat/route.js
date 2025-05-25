@@ -14,7 +14,7 @@ export async function POST(req) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4',
+        model: 'gpt-3.5-turbo', // ✅ SET THE MODEL HERE
         messages,
         temperature: 0.7,
       }),
@@ -34,3 +34,4 @@ export async function POST(req) {
     });
   }
 }
+
