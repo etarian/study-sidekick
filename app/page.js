@@ -34,31 +34,33 @@ export default function Page() {
   };
 
   if (!started) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-white p-8">
-        <div className="max-w-2xl text-center">
-          <h1 className="text-4xl font-bold mb-4 text-blue-900 flex items-center justify-center gap-2">
-            <span>📘</span> StudySidekick
-          </h1>
-          <p className="text-lg text-gray-700 mb-6">
-            Your personal AI-powered homework helper.
-            <br />
-            ✅ Ask any question
-            <br />
-            ✅ Get help, not just answers
-            <br />
-            ✅ Choose your subject & explanation style
-          </p>
-          <button
-            className="bg-blue-600 text-white px-6 py-3 text-lg rounded shadow hover:bg-blue-700"
-            onClick={() => setStarted(true)}
-          >
-            Start Learning ➜
-          </button>
-        </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center justify-center px-6 py-12">
+      <div className="max-w-3xl text-center">
+        <h1 className="text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
+          📘 Meet Your <span className="text-blue-600">Study Sidekick</span>
+        </h1>
+        <p className="text-lg text-gray-700 mb-8">
+          Your personal AI-powered homework helper. Ask questions. Get clear answers. Learn faster.
+        </p>
+
+        <ul className="text-gray-600 text-left mb-10 mx-auto max-w-md space-y-2">
+          <li>✅ Step-by-step help</li>
+          <li>✅ Choose your subject</li>
+          <li>✅ Explain or just answer mode</li>
+        </ul>
+
+        <button
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-lg transition duration-300"
+          onClick={() => setStarted(true)}
+        >
+          Start Learning ➜
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   return (
     <div className="p-4 max-w-xl mx-auto">
